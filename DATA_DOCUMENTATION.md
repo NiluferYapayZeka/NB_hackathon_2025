@@ -220,10 +220,9 @@ Aylık bazda toplanan atık tonajları.
 ---
 
 ### 8. `address_data.csv` - Adres Veritabanı
-**Boyut:** 17 MB | **Kayıt Sayısı:** ~200,000 adres kaydı (tahmin)
+**Boyut:** 17 MB | **Kayıt Sayısı:** ~150,000 adres kaydı
 
-Nilüfer ilçesindeki adres bilgileri (detaylarına erişim sınırlı).
-
+Nilüfer ilçesindeki adres bilgileri 
 #### Potansiyel Sütunlar:
 - Sokak/Cadde adları
 - Mahalle bilgileri
@@ -247,7 +246,7 @@ Excel formatında ek veriler (içerik inceleme gerektiriyor).
 ### 10. `Yol-2025-12-16_13-38-47.json` - JSON Veri Dosyası
 **Boyut:** 9.1 MB
 
-JSON formatında yapısal veri (muhtemelen rota veya coğrafi veriler).
+JSON formatında yapısal veri (yollara ait coğrafi veriler).
 
 ---
 
@@ -293,22 +292,6 @@ tonnages.csv (toplam seviyede)
 - Mahalle yoğunluk haritaları
 - Optimal konteyner yerleşimi
 - Servis bölgesi segmentasyonu
-
----
-
-## 🛠️ Veri Kalitesi Notları
-
-### Güçlü Yönler:
-✅ Gerçek operasyonel veri  
-✅ Detaylı GPS takibi  
-✅ Çok boyutlu veri kaynakları  
-✅ Güncel zaman dilimi (2024-2025)
-
-### Dikkat Edilmesi Gerekenler:
-⚠️ GPS verileri yalnızca örnek 2 günlük  
-⚠️ Bazı mahallelerde özel durumlar var (Gölyazı: yer çöpü)  
-⚠️ Konteyner sayılarında bazı eksik değerler  
-⚠️ JSON ve Excel dosyaları detaylı inceleme gerektiriyor
 
 ---
 
