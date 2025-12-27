@@ -7,7 +7,7 @@ Bu veri seti, Bursa Nilüfer Belediyesi'nin atık toplama operasyonlarına ait g
 **Veri Dönemi:** Aralık 2024 - Aralık 2025  
 **Toplam Dosya Sayısı:** 10  
 **Toplam Veri Boyutu:** ~147 MB  
-**Kapsanan Alan:** Bursa Nilüfer İlçesi (65 mahalle)
+**Kapsanan Alan:** Bursa Nilüfer İlçesi (64 mahalle)
 
 ---
 
@@ -29,7 +29,6 @@ Atık toplama filosundaki tüm araçların detaylı bilgilerini içerir.
 
 #### Özellikler:
 - **3 araç tipi** mevcut: Vinçli Araç (23m³), Büyük Kamyon (16.5m³), Küçük Kamyon (9m³)
-- Kapasite değerleri Gaussian dağılım ile rastgele atanmıştır (belirlenen aralıklarda)
 - Her araç için benzersiz ID ve isim bilgisi
 
 #### Kullanım Alanları:
@@ -87,7 +86,7 @@ Araç filosunun detaylı GPS takip verileri. Her bir GPS kaydı, araç konumu, h
 | `Kaynak` | String | Veri kaynağı | "Log", "Program" |
 
 #### Özellikler:
-- **Zaman aralığı:** 19-20 Aralık 2025 (örnek veri)
+- **Zaman aralığı:** Aralık 2025
 - **Veri frekansı:** Yaklaşık 10 saniyede bir GPS kaydı
 - **Kapsam:** 46 araç için detaylı hareket verileri
 - **Durum kodları:** Duran, Hareketli, Kontak Açıldı/Kapandı, çeşitli alarm tipleri
@@ -102,7 +101,7 @@ Araç filosunun detaylı GPS takip verileri. Her bir GPS kaydı, araç konumu, h
 ---
 
 ### 4. `container_counts.csv` - Mahalle Bazlı Konteyner Envanteri
-**Boyut:** 1.9 KB | **Kayıt Sayısı:** 66 mahalle
+**Boyut:** 1.9 KB | **Kayıt Sayısı:** 64 mahalle
 
 Her mahallede bulunan farklı tipteki konteyner sayılarını içerir.
 
@@ -143,14 +142,13 @@ Mahalle bazlı nüfus verileri.
 | `nufus` | Integer | Nüfus (kişi) | 4371 |
 
 #### Özellikler:
-- **Toplam nüfus:** Yaklaşık 470,000 kişi
+- **Toplam nüfus:** Yaklaşık 560,000 kişi
 - **Nüfus aralığı:** 92 (ÜÇPINAR) - 32,489 (GÖRÜKLE)
 - En kalabalık mahalleler: Görükle, İhsaniye, Dumlupınar
 
 #### Kullanım Alanları:
 - Nüfus yoğunluğu bazlı atık tahminlemesi
 - Hizmet önceliklendirme
-- Demografik analiz
 
 ---
 
@@ -223,7 +221,7 @@ Aylık bazda toplanan atık tonajları.
 **Boyut:** 17 MB | **Kayıt Sayısı:** ~150,000 adres kaydı
 
 Nilüfer ilçesindeki adres bilgileri 
-#### Potansiyel Sütunlar:
+### Sütunlar:
 - Sokak/Cadde adları
 - Mahalle bilgileri
 - Koordinat bilgileri
@@ -247,22 +245,6 @@ Excel formatında ek veriler (içerik inceleme gerektiriyor).
 **Boyut:** 9.1 MB
 
 JSON formatında yapısal veri (yollara ait coğrafi veriler).
-
----
-
-## 🔗 Veri İlişkileri
-
-```
-fleet.csv (vehicle_id)
-    ↓
-all_merged_data.csv (vehicle_id, Mahalle)
-    ↓
-container_counts.csv (MAHALLE) ← mahalle_nufus.csv (mahalle)
-    ↓
-neighbor_days_rotations.csv (MAHALLE ADI)
-    ↓
-tonnages.csv (toplam seviyede)
-```
 
 ---
 
